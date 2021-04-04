@@ -20,3 +20,11 @@ def make_spinner():
 
     console.rule("[bold red]API Response")
     console.print(response)
+
+
+def make_eof_spinner():
+    """Make Spinner component EOF exception."""
+    console = Console()
+
+    with console.status('Closing aplication...'):
+        sleep(1)

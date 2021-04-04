@@ -17,7 +17,7 @@ def make_message():
     )
     message.add_row(
         "Check the Repository on GitHub",
-        ("[u blue link=https://github.com/samborba]"
+        ("[u blue link=https://github.com/samborba/rich-terminal]"
          "https://github.com/samborba/rich-terminal")
     )
 
