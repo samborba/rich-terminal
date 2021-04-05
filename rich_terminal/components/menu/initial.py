@@ -1,4 +1,5 @@
 from rich.console import Console
+from rich.markdown import Markdown
 from rich.prompt import IntPrompt
 
 from rich_terminal.components.live_display import make_live_table_display
@@ -8,7 +9,7 @@ from rich_terminal.components.tree import make_tree
 from rich_terminal.components.menu.brands import list_countries
 from rich_terminal.prompts.products import beer_creation
 
-MARKDOWN = """
+MARKDOWN = Markdown("""
 Select the feature to be shown:
 1. List Products — (Spinner and Table)
 2. Create Products — (Progress Display and Prompt)
@@ -17,7 +18,7 @@ Select the feature to be shown:
 5. List Products on Real Time — (Live Display)
 6. Brand by County — (Markdown)
 7. Exit POC
-"""
+""")
 
 
 def options(option: int):

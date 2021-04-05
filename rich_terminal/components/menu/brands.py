@@ -1,74 +1,81 @@
 from time import sleep
 
-from rich import print
 from rich.console import Console
+from rich.markdown import Markdown
 from rich.prompt import IntPrompt
 
-MARKDOWN = """
-Select the country:
+MARKDOWN = Markdown("""
+# Select the country:
 1. Brazil
 2. Germany
 3. Belgium
 4. United Kingdom
 5. Netherlands
-"""
+""")
 
 
 def list_brazil_brands():
     """List Brazil brands."""
-    markdown = """
+    console = Console()
+    markdown = Markdown("""
 - Liber
 - Antarctica
 - Cervejaria Wäls
 - Aqua Fratelli Vita
 - Cervejaria Colorado
-    """
-    print(markdown)
+    """)
+    markdown = Markdown(markdown)
+    console.print(markdown)
 
 
 def list_germany_brands():
     """List Germany brands."""
-    markdown = """
+    console = Console()
+    markdown = Markdown("""
 - Dimix
 - Beck's
 - Haake-Beck
 - Gilde Ratskeller
 - Franziskaner Weissbier
-    """
-    print(markdown)
+    """)
+    console.print(markdown)
 
 
 def list_belgium_brands():
     """List Belgium brands."""
-    markdown = """
+    console = Console()
+    markdown = Markdown("""
 - Leffe
 - Belle-Vue
 - Hoegaarden
 - Vieux Temps
 - Bosteels Brewery
-    """
-    print(markdown)
+    """)
+    console.print(markdown)
 
 
 def list_uk_brands():
     """List United Kingdom brands."""
-    markdown = """
+    console = Console()
+    markdown = Markdown("""
 - Bass
 - Whitbread
 - Boddingtons
 - Camden Town Brewery
-    """
-    print(markdown)
+    """)
+    console.print(markdown)
 
 
 def list_netherlands_brands():
     """List Netherlands brands."""
-    markdown = """
+    console = Console()
+    markdown = Markdown("""
 - Dommelsch
 - Hertog Jan
 - Oranjeboom
-    """
-    print(markdown)
+    """)
+
+    console.print(markdown)
 
 
 def options(option: int):
