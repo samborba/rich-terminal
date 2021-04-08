@@ -30,14 +30,17 @@ def options(option: int):
     option : int
         The selected option
     """
-    {
-        1: make_spinner,
-        2: beer_creation,
-        3: make_logging,
-        4: make_tree,
-        5: make_live_table_display,
-        6: list_countries,
-    }[option]()
+    try:
+        {
+            1: make_spinner,
+            2: beer_creation,
+            3: make_logging,
+            4: make_tree,
+            5: make_live_table_display,
+            6: list_countries,
+        }[option]()
+    except KeyError:
+        return
 
 
 def initial_menu():
@@ -53,14 +56,19 @@ def initial_menu():
     console = Console()
     console.print(MARKDOWN)
 
-    # all component actions except `Exit POC`
-    actions = ['1', '2', '3', '4', '5', '6']
-
     option = IntPrompt.ask("Enter your choice",
-                           choices=actions.extend(['7']),
+                           choices=[
+                               '1',
+                               '2',
+                               '3',
+                               '4',
+                               '5',
+                               '6',
+                               '7'
+                            ],
                            show_choices=False)
 
-    if option not in actions:
+    if option not in [7]:
         options(option)
         return True
 
